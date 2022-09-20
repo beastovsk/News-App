@@ -3,7 +3,7 @@ import React from "react";
 import "./NewsListItem.css";
 
 function NewsListItem({ newsList }) {
-    return newsList.map((newsItem) => {
+    return newsList.map((newsItem, i) => {
         const { author, publishedAt, description, url, urlToImage, source } =
             newsItem;
 
@@ -11,7 +11,7 @@ function NewsListItem({ newsList }) {
         let publishedTime = publishedAt.slice(11, 16);
         
         return (
-            <div className="news-item">
+            <div className="news-item" key={i}>
                 <a
                     href={url}
                     rel="noopener noreferrer"

@@ -5,11 +5,17 @@ export const rootReducer = (state = initialState, action) => {
     // Actions
     switch (action.type) {
         case "SEND_QUERY":
-            return true
+            return {
+                articles: [],
+                query: action.query,
+            };
         default:
             break;
         case "SEND_ARTICLES":
-            return [...state, ...action.articles]
+            return {
+                articles: [...state.articles, ...action.articles],
+                query: null
+            };
     }
 
     return state;

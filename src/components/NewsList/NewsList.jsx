@@ -10,13 +10,13 @@ function NewsList() {
 
     return (
         <div className="news-list">
-            <NewsListItem newsList={newsContentData} />
+            <NewsListItem newsList={newsContentData.articles} />
         </div>
     );
 }
 
 export default connect(
     (state) => ({
-        newsList: state
+        newsList: state.articles
     })
 )(NewsList);

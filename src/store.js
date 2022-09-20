@@ -1,5 +1,8 @@
 import { createStore } from "redux";
 import { rootReducer } from "./redux/rootReducer";
+import asyncNews from './asyncNews'
+
+console.log(asyncNews);
 
 export let initialState = [
     {

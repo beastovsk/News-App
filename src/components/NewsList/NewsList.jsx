@@ -3,6 +3,7 @@ import NewsListItem from "./NewsListItem/NewsListItem";
 
 import { store } from '../../store'
 import './NewsList.css'
+import { connect } from "react-redux";
 
 function NewsList() {
     let newsContentData = store.getState()
@@ -14,4 +15,8 @@ function NewsList() {
     );
 }
 
-export default NewsList;
+export default connect(
+    (state) => ({
+        newsList: state
+    })
+)(NewsList);

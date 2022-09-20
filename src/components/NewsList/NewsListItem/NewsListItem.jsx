@@ -9,8 +9,7 @@ function NewsListItem({ newsList }) {
 
         let publishedData = publishedAt.slice(0, 10);
         let publishedTime = publishedAt.slice(11, 16);
-        console.log(publishedData, publishedTime);
-
+        
         return (
             <div className="news-item">
                 <a

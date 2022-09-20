@@ -1,0 +1,19 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation__input {
+    min-width: 40%;
+
+    border-radius: 15px 0px 0px 15px;
+
+
+}
+
+.navigation__button {
+    border-radius: 0px 15px 15px 0px;
+
+    background-color: rgb(219, 89, 89);
+    color: #fff;
+}

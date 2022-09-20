@@ -1,5 +1,6 @@
-.App {
+.news-list {
     display: flex;
     flex-direction: column;
+    max-width: 80%;
     margin: 20px auto;
 }

@@ -9,7 +9,11 @@ function NewsListItem({ newsList }) {
 
         let publishedData = publishedAt.slice(0, 10);
         let publishedTime = publishedAt.slice(11, 16);
-        
+
+        if (!urlToImage) {
+            return false
+        }
+
         return (
             <div className="news-item" key={i}>
                 <a
@@ -22,7 +26,9 @@ function NewsListItem({ newsList }) {
                 </a>
                 <div className="news-item__content">
                     <h1 className="news-item__content-heading">
-                        <a href={url}>{description}</a>
+                        <a href={url} target="_blank" rel="noopener noreferrer">
+                            {description}
+                        </a>
                     </h1>
 
                     <div className="news-item__content-footer">

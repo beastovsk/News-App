@@ -1,4 +1,4 @@
-import { initialState } from "../store";
+import { initialState } from "./store";
 
 export const rootReducer = (state = initialState, action) => {
 

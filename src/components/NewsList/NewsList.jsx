@@ -7,7 +7,7 @@ import loading from "./loading.svg";
 import { connect } from "react-redux";
 
 function NewsList() {
-    let newsContentData = store.getState();
+    let newsContentData = store.getState().toolkit;
 
     const isLoadedNews =
         newsContentData.articles.length === 0 ? (
@@ -20,5 +20,5 @@ function NewsList() {
 }
 
 export default connect((state) => ({
-    newsList: state.articles,
+    newsList: state.toolkit.articles,
 }))(NewsList);
